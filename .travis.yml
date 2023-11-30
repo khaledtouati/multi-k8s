@@ -19,7 +19,7 @@ before_install:
 - python --version
 - export CLOUDSDK_PYTHON=/path/to/python3.10
 - rm -rf $HOME/google-cloud-sdk;
-
+- pyenv install 3.10:latest
 - python3
 - pip show numpy
 
