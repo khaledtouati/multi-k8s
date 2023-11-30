@@ -14,10 +14,10 @@ env:
 
 
 before_install:
-- if [ ! -d $HOME/google-cloud-sdk/bin ]; then
-    rm -rf $HOME/google-cloud-sdk;
-    curl https://sdk.cloud.google.com | bash > /dev/null;
-  fi
+- rm -rf $HOME/google-cloud-sdk;
+
+- curl https://sdk.cloud.google.com | bash > /dev/null;
+  
 - source $HOME/google-cloud-sdk/path.bash.inc
 - gcloud components update kubectl
 - gcloud version
@@ -50,11 +50,11 @@ deploy:
   script: bash ./deploy.sh
   on:
     branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
+  # access_key_id: $AWS_ACCESS_KEY
+  # secret_access_key: $AWS_SECRET_KEY
 
 
-  app: 'multi-docker'
-  env: 'MultiDocker-env'
-  bucket_name: 'elasticbeanstalk-us-east-1-923445559289'
-  bucket_path: 'docker-multi'
+  # app: 'multi-docker'
+  # env: 'MultiDocker-env'
+  # bucket_name: 'elasticbeanstalk-us-east-1-923445559289'
+  # bucket_path: 'docker-multi'
