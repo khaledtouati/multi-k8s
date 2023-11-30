@@ -14,6 +14,9 @@ env:
 
 
 before_install:
+- sudo apt-get install python3.10
+- python –version
+- export CLOUDSDK_PYTHON=/path/to/python3.10 
 - rm -rf $HOME/google-cloud-sdk;
 
 - curl https://sdk.cloud.google.com | bash > /dev/null;
