@@ -19,7 +19,7 @@ before_install:
 - python --version
 - export CLOUDSDK_PYTHON=/path/to/python3.10
 - rm -rf $HOME/google-cloud-sdk;
-- import sys print(sys.exec_prefix)
+
 - python3
 - pip show numpy
 
