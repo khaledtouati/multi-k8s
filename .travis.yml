@@ -14,7 +14,7 @@ env:
 
 
 before_install:
-- sudo gem install python3.10
+- sudo gem install python 
 - sudo apt-get install python3.10
 - python --version
 - export CLOUDSDK_PYTHON=/path/to/python3.10
